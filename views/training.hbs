@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Training</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+{{>header}}
+{{!-- <table>
+    <tr>
+        <th>Course</th>
+        <th>Details</th>
+        <th>Duration</th>
+        <th>Outcome</th>
+        <th>Fee</th>
+    </tr>
+    {{#each data}}
+    <tr>
+        <td>{{this.course_name}}</td>
+        <td>{{this.course_details}}</td>
+        <td>{{this.duration}}</td>
+        <td>{{this.outcome}}</td>
+        <td>{{this.fee}}</td>
+    </tr>
+    {{/each}}
+</table> --}}
+
+<div class="container-fluid">
+    <div class="row p-2">
+        {{#each data}}
+        <div class="col-xl-4 col-md-3 col-sm-12 col-12 p-2">
+            <div class="p-3 text-center" style="border: 2px solid red;">
+                <h4 class="text-center">{{this.course_name}}</h4>
+                <p>{{this.course_details}}</p>
+                <p>{{this.duration}}</p>
+                <p>{{this.outcome}}</p>
+                <p>{{this.fee}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+
+{{>footer}}
+</body>
+</html>

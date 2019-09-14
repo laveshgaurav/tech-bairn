@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Workshop</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="icon" href="../assets/icon.jpg" type="image" sizes="16x16">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+{{>header}}
+<div style="background-color: #0F054C"class="container-fluid">
+    <div class="row">
+
+        <div class="col-xl-4 col-md-4 col-sm-12 col-12 p-2">
+            <div class="cards">
+                <div class="card">
+                    <img class="card__image" src="../assets/IOT.jpg" alt="wave" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h2>
+                           Internet Of Things
+                            
+                        </h2>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Tech Bairn provides workshop on ‘Internet of Things’. The aim of this workshop is to help students understand the basics
+                            of Embedded systems and communication amongst the same. A two-day event will be held of 8 hours per day where students
+                            will deal with a simple project on Smart Home Automation System based on NodeMCU. All the required parts will be
+                            provided during the workshop itself.
+                            
+                            Students from any branch can attend workshops.
+                        </div>
+                        <div class="card-flap flap2">
+                            <div class="card-actions">
+                                <a href="IOT" class="btn" target="_blank">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-xl-4 col-md-4 col-sm-12 col-12 p-2">
+            <div class="cards">
+                <div class="card">
+                    <img class="card__image" src="../assets/Robotics.jpg" alt="wave" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h2>
+                            Embedded Systems and Robotics
+        
+                        </h2>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Tech Bairn provides workshop on ‘Embedded Systems and Robotics’. A project based on Atmega 16 and Arduino Uno (as the
+                            motherboard for the system) will be taken up for experience and subsequently clearing out the basics of Embedded Systems
+                            and Arduino and the variety of sensors that will be used during the session. All requisite components will be provided
+                            during the workshop, of duration 2 days, 7 hours each.
+                            
+                            Students from any branch can attend workshops.
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-xl-4 col-md-4 col-sm-12 col-12 p-2">
+                <div class="cards">
+                    <div class="card">
+                        <img class="card__image" src="../assets/machineLearning3.png" alt="wave" />
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h2>
+                                Machine Learning
+            
+                            </h2>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                Tech Bairn provides workshop on ‘Machine Learning’. Python will be used as the backbone of the programs that come under
+                                the basics of machine learning in this session.
+                                The fundamentals of making a dataset, training it and then designing a model to get the desired result will be
+                                demonstrated in this two-day session of 9 hours each.
+                                The main focus of this workshop is to help students understand programming in Python and beginner-to-intermediate level
+                                machine learning with the help of in-built libraries in Python language.
+                                
+                                Students from any branch can attend workshops.
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-4 col-sm-12 col-12 p-2">
+                <div class="cards">
+                    <div class="card">
+                        <img class="card__image" src="../assets/AR.jpg" alt="wave" />
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h2>
+                                Augmented Reality/Virtual Reality
+            
+                            </h2>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                Tech Bairn provides a workshop on ‘Augmented Reality/Virtual Reality’. The use of Unity as the main platform for making
+                                AR applications will be done, followed by its detection and visualization using the Vuforia API.
+                                This workshop spanning over two days, 7 hours each, aims to encourage students to work on AR/VR and develop applications
+                                concerning it.
+                                
+                                
+                                Students from any branch can attend workshops.
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    </div>
+</div>
+
+{{>footer}}
+<script src="../JS/typed.js"></script>
+<script src="../JS/function.js"></script>
+<script>
+    $(document).ready(function () {
+            var zindex = 10;
+
+            $("div.card").click(function (e) {
+                e.preventDefault();
+
+                var isShowing = false;
+
+                if ($(this).hasClass("show")) {
+                    isShowing = true
+                }
+
+                if ($("div.cards").hasClass("showing")) {
+                    // a card is already in view
+                    $("div.card.show")
+                        .removeClass("show");
+
+                    if (isShowing) {
+                        // this card was showing - reset the grid
+                        $("div.cards")
+                            .removeClass("showing");
+                    } else {
+                        // this card isn't showing - get in with it
+                        $(this)
+                            .css({ zIndex: zindex })
+                            .addClass("show");
+
+                    }
+
+                    zindex++;
+
+                } else {
+                    // no cards in view
+                    $("div.cards")
+                        .addClass("showing");
+                    $(this)
+                        .css({ zIndex: zindex })
+                        .addClass("show");
+
+                    zindex++;
+                }
+
+            });
+        });
+</script>
+</body>
+
+</html>
