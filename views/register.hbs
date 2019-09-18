@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    {{>header}}
+
+    <div class="container">
+        <form method="POST" action="/addTrainingCourse" autocomplete="off">
+            <div class="form-group">
+                <label for="course_name">Name</label>
+                <input type="text" class="form-control" placeholder="Name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="course_details">Email</label>
+                <input type="text" class="form-control"  placeholder="Email" name="email">
+                
+            </div>
+            <div class="form-group">
+                <label for="duration">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Phone Number" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="outcome">Course</label>
+                <input type="text" class="form-control" placeholder="Enter Name Of Opted Course" name="course">
+            </div>
+            <div class="text-center"><input class="btn btn-primary" type="submit"></div>
+        </form>
+    
+    </div>
+    {{>footer}}
+</body>
+</html>

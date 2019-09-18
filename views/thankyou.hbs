@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="../CSS/thankyou.css">
+    <link rel="icon" href="../assets/icon.jpg" type="image" sizes="16x16">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    {{>header}}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 col-sm-12 col-md-12 col-12 text-center">
+            <div id="thankyou-container">
+                <div class="container-fluid">
+                    <div class="content text-center">
+                        <h1><span style="color: #00AEEF">Thank You</span> "{{name}}" for registering us for <span style="color: #00AEEF">{{course}}</span>. We'll connect you soon.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script> --}}
+<script>
+    var confettiShower = [];
+    var numConfettis = 300;
+    var container = document.getElementById("thankyou-container");
+    var colors = ["#FFB1A3", "#FF6E6F", "#77B8C0", "#FFC862"];
+
+    class Confetti {
+        constructor(x, y, w, h, c) {
+            this.w = Math.floor(Math.random() * 10 + 5);
+            this.h = this.w * 1.2;
+            // this.h = Math.floor(Math.random() * (this.w * 1.4) + 2);
+            this.x = Math.floor(Math.random() * 100);
+            this.y = Math.floor(Math.random() * 100);
+            this.c = colors[Math.floor(Math.random() * colors.length)];
+        }
+        create() {
+            var newConfetti =
+                '<div class="thankyou" style="bottom:' +
+                this.y +
+                " %; left:" + this.x + "%;width:" + this.w + "px; height:" + this.h
+                + 'px;"><div class="rotate"><div class="askew" style="background-color:' + this.c + '"></div></div></div>';
+            container.innerHTML += newConfetti;
+        }
+    } function animateConfetti() {
+        for (var i = 1; i <= numConfettis; i++) {
+            var confetti = new Confetti(); confetti.create();
+        } var confettis = document.querySelectorAll(".thankyou"); for
+            (var i = 0; i < confettis.length; i++) {
+                var opacity = Math.random() + 0.1; var animated = confettis[i].animate([
+                    { transform: "translate3d(0,0,0)", opacity: opacity }, {
+                        transform: "translate3d(20vw,100vh,0)", opacity:
+                            1
+                    }], { duration: Math.random() * 3000 + 3000, iterations: Infinity, delay: -(Math.random() * 5000) });
+            confettiShower.push(animated);
+        }
+    } animateConfetti();
+
+</script>
+{{>footer}}
+<script src="../JS/typed.js"></script>
+<script src="../JS/function.js"></script>
+
+</body>
+
+</html>

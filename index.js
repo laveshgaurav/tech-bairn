@@ -47,6 +47,9 @@ app.get('/training', (req, res) => {
 app.get('/', (req, res) => {
             res.render('index');       
 });
+app.get('/register', (req, res) => {
+    res.render('register');
+});
 
 app.get('/IOT', (req, res) => {
     res.sendFile(__dirname+'/Documents/1. Internet of Things Workshop.pdf')
@@ -66,9 +69,9 @@ app.post('/addTrainingCourse', async (req, res) => {
 
     try {
         const savedTraining = await TrainingNew.save();
-        res.render('add_training', {
+        res.render('thankyou', {
             name: req.body.name,
-            email: req.body.email
+            course: req.body.course
         })
     } catch (err) {
         res.json({

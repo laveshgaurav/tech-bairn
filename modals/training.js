@@ -1,26 +1,23 @@
 const mongoose = require('mongoose');
 
 const TrainingSchema = mongoose.Schema({
-    course_name: {
+    name: {
         type: String,
         require: true
     },
-    course_details: {
+    email: {
         type: String,
         require: true
     },
-    duration: {
+    phone: {
         type: String,
         require: true
     },
-    outcome: {
-        type: String,
-        require: true
-    },
-    fee: {
+    course: {
         type: String,
         require: true
     }
+
 });
 
-module.exports = mongoose.model('Training', TrainingSchema);
+module.exports = mongoose.model('Registered_Students', TrainingSchema);
