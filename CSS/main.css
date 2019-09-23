@@ -212,6 +212,9 @@
 }
 
 .container-box .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
   width: 320px;
   -webkit-box-shadow: 0 10px 30px rgba(1, 1, 1, 0.766);
@@ -254,13 +257,21 @@
   transition: 0.5s;
   -webkit-transform-origin: initial;
           transform-origin: initial;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 75px;
 }
 
 .container-box .card div p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin-bottom: 10px;
   font-size: 18 px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  height: 315px;
 }
 
 .container-box .card div div a {

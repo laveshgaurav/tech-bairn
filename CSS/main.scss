@@ -148,6 +148,7 @@ $secondary_color: #00AEEF;
 }
 .container-box{
     .card{
+        flex: 1;
         position: relative;
         width: 320px;
         box-shadow: 0 10px 30px rgba(1,1,1,0.766);
@@ -197,6 +198,8 @@ $secondary_color: #00AEEF;
                 color: $secondary_color;
                 transition: 0.5s;
                 transform-origin: initial;
+                flex: 1;
+                height: 75px;
             }
         }
     }
@@ -205,9 +208,11 @@ $secondary_color: #00AEEF;
     .card {
         div {
             p {
+                flex: 1;
                 margin-bottom: 10px;
                 font-size: 18 px;
                 transition: 0.5s;
+                height: 315px;
             }
         }
     }
