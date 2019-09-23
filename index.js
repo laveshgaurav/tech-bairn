@@ -32,17 +32,22 @@ mongoose.connect('mongodb+srv://lavesh:Lavrsh@1998@cluster0-ftdqa.mongodb.net/te
     useNewUrlParser: true
 }, () => console.log('Connected To MongoDB'));
 
+// app.get('/training', (req, res) => {
+//     Training.find((err,docs)=>{
+//         if(!err){
+//             console.log(docs);
+//             res.render("training",{data:docs});
+//         }
+//         else{
+//             res.send("Error")
+//         }
+//     });
+// });
+
 app.get('/training', (req, res) => {
-    Training.find((err,docs)=>{
-        if(!err){
-            console.log(docs);
-            res.render("training",{data:docs});
-        }
-        else{
-            res.send("Error")
-        }
-    });
+    res.render('training');
 });
+
 
 app.get('/', (req, res) => {
             res.render('index');       
@@ -51,9 +56,6 @@ app.get('/register', (req, res) => {
     res.render('register');
 });
 
-app.get('/IOT', (req, res) => {
-    res.sendFile(__dirname+'/Documents/1. Internet of Things Workshop.pdf')
-})
 
 app.get('/workshop', (req, res) => {
     res.render('workshop');

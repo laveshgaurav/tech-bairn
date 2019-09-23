@@ -16,6 +16,10 @@ const TrainingSchema = mongoose.Schema({
     course: {
         type: String,
         require: true
+    },
+    location: {
+        type: String,
+        require: true
     }
 
 });

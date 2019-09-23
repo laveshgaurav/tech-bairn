@@ -30,9 +30,25 @@
                 <label for="duration">Phone Number</label>
                 <input type="text" class="form-control" placeholder="Phone Number" name="phone">
             </div>
-            <div class="form-group">
+            {{!-- <div class="form-group">
                 <label for="outcome">Course</label>
                 <input type="text" class="form-control" placeholder="Enter Name Of Opted Course" name="course">
+            </div> --}}
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select name="course" class="form-control">
+                    <option value="IOT">Internet Of Things (IOT)</option>
+                    <option value="Robotics">Robotics</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="AR/VR">Augmented/Virtual Reality</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select name="location" class="form-control">
+                    <option value="Bhubaneswar">Bhubaneswar</option>
+                    <option value="Patna">Patna</option>
+                </select>
             </div>
             <div class="text-center"><input class="btn btn-primary" type="submit"></div>
         </form>

@@ -142,3 +142,89 @@ $secondary_color: #00AEEF;
 .same-height{
     height: 970px;
 }
+.container-box{
+    display: flex;
+    justify-content: space-between;
+}
+.container-box{
+    .card{
+        position: relative;
+        width: 320px;
+        box-shadow: 0 10px 30px rgba(1,1,1,0.766);
+        overflow: hidden;
+    }
+}
+.container-box{
+    .card::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: calc(-100% + 8px);
+        width: 100%;
+        height: 100%;
+        background: $primary_color;
+        z-index: 1;
+        transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    }
+}
+.container-box{
+    .card:hover::before{
+        bottom: 0px;
+    }
+}
+.container-box {
+    .card:hover div p {
+       color: white;
+    }
+}
+
+.container-box{
+    .card{
+        div{
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+.container-box {
+    .card {
+        div {
+            h2{
+                margin-bottom: 10px;
+                font-size: 30px;
+                transition: 0.5s;
+                color: $secondary_color;
+                transition: 0.5s;
+                transform-origin: initial;
+            }
+        }
+    }
+}
+.container-box {
+    .card {
+        div {
+            p {
+                margin-bottom: 10px;
+                font-size: 18 px;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+.container-box {
+    .card {
+        div {
+            div {
+                a{
+                    background: white;
+                    text-decoration: none;
+                    padding: 6px 10px;
+                    transition: 0.5s;
+                    font-weight: 600;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
