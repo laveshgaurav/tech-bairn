@@ -60,6 +60,9 @@ app.get('/register', (req, res) => {
 app.get('/workshop', (req, res) => {
     res.render('workshop');
 });
+app.get('/R&D', (req, res) => {
+    res.render('R&D');
+});
 app.get('/addtraining', (req, res) => {
     res.render('add_training');
 });

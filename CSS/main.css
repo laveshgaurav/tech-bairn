@@ -165,9 +165,12 @@
   overflow: hidden;
 }
 
-.overflow-hidden {
-  height: 900px;
-  overflow: scroll;
+.overflow-hidden h2 {
+  height: 76px;
+}
+
+.overflow-hidden p {
+  height: 480px;
 }
 
 .cards,
