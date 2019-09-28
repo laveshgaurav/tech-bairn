@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
-const Training = require('./modals/training');
+const workshop = require('./modals/workshop');
+const training = require('./modals/training');
 const hbs = require('express-handlebars');
 var path = require('path')
 const Routing = require("./controllers/routes");
@@ -52,28 +53,36 @@ app.get('/training', (req, res) => {
 app.get('/', (req, res) => {
             res.render('index');       
 });
-app.get('/register', (req, res) => {
-    res.render('register');
+app.get('/workshop_register', (req, res) => {
+    res.render('workshop_register');
 });
-
+app.get('/training_register', (req, res) => {
+    res.render('training_register');
+});
 
 app.get('/workshop', (req, res) => {
     res.render('workshop');
 });
+app.get('/project', (req, res) => {
+    res.render('project');
+});
 app.get('/R&D', (req, res) => {
     res.render('R&D');
+});
+app.get('/contact_us', (req, res) => {
+    res.render('contact_us');
 });
 app.get('/addtraining', (req, res) => {
     res.render('add_training');
 });
 
 
-app.post('/addTrainingCourse', async (req, res) => {
+app.post('/addWorkshop', async (req, res) => {
     console.log(req.body);
-    const TrainingNew = new Training(req.body);
+    const workshopNew = new workshop(req.body);
 
     try {
-        const savedTraining = await TrainingNew.save();
+        const savedworkshop = await workshopNew.save();
         res.render('thankyou', {
             name: req.body.name,
             course: req.body.course
@@ -85,3 +94,19 @@ app.post('/addTrainingCourse', async (req, res) => {
     }
 });
 
+app.post('/addTraining', async (req, res) => {
+    console.log(req.body);
+    const trainingNew = new training(req.body);
+
+    try {
+        const savedtraining = await trainingNew.save();
+        res.render('thankyou', {
+            name: req.body.name,
+            course: req.body.course
+        })
+    } catch (err) {
+        res.json({
+            message: err
+        });
+    }
+})
