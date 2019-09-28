@@ -6,6 +6,19 @@
   font-family: 'Roboto',sans-serif;
 }
 
+.nav-link {
+  font-size: 18px;
+  letter-spacing: 0.4px;
+  -webkit-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border 350ms ease-in-out;
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border 350ms ease-in-out;
+  margin: 8px;
+}
+
+.nav-link:hover {
+  color: #00AEEF !important;
+  border-bottom: 2px solid #00AEEF;
+}
+
 @media (min-width: 1023px) {
   .home-text {
     margin-top: 20vh;

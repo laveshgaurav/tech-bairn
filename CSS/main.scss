@@ -8,6 +8,19 @@ $secondary_color: #00AEEF;
     font-family: 'Roboto',sans-serif;
     // font-style: Roboto;
 }
+.nav-link{
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    transition:0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+    border 350ms ease-in-out;
+    margin: 8px;
+}
+.nav-link:hover{
+    color: $secondary_color!important;
+    // letter-spacing: 1.2px;
+    border-bottom: 2px solid $secondary_color;
+    // margin: 9.2px;
+}
 
 @media (min-width:1023px){
     .home-text{
